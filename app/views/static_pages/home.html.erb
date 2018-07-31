@@ -1,0 +1,13 @@
+<h1>Bienvenue sur la page d'accueil ⛵️🎓😇 !</h1>
+<p>Vous trouverez plein de belle choses ici</p>
+<a href="<%= new_path %>"><button>Pour créer un utilisateur c'est par ici !</button></a>
+</br>
+</br>
+<div>
+  <% User.all.each_with_index do |users, index| %>
+    <p>
+    </br>
+      <a href="/users/<%= users.username %>"><button> Voir la page de <%= users.username %></button></a>
+    </p>
+  <% end %>
+</div>
